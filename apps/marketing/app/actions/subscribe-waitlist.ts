@@ -40,7 +40,7 @@ export async function subscribeWaitlist(data: WaitlistFormData) {
 		if (existingContact.data && !existingContact.data.unsubscribed) {
 			return {
 				success: true,
-				message: "You're already on the waitlist! We'll keep you updated.",
+				message: "You have already requested access. We'll keep you updated.",
 			};
 		}
 
@@ -57,17 +57,17 @@ export async function subscribeWaitlist(data: WaitlistFormData) {
 		await resend.emails.send({
 			from: env.EMAIL_FROM,
 			to: validatedData.email,
-			subject: "Welcome to the Recruut Waitlist! 🚀",
+			subject: "Thanks for requesting access! 🚀",
 			html: `
 				<div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-					<h2>Thanks for joining the Recruut waitlist!</h2>
+					<h2>Thanks for requesting access!</h2>
 					<p>Hi${validatedData.firstName ? ` ${validatedData.firstName}` : ""},</p>
-					<p>You're all set! We're excited to have you on our waitlist for the future of AI-powered recruiting.</p>
+					<p>We're excited to have you on our waitlist for the future of AI-powered recruiting.</p>
 					<p>Here's what happens next:</p>
 					<ul>
 						<li>We'll keep you updated on our progress</li>
 						<li>You'll be among the first to know when we launch</li>
-						<li>Waitlist members get exclusive early access and special pricing</li>
+						<li>You'll get exclusive early access and special pricing</li>
 					</ul>
 					<p>Best regards,<br>The Recruut Team</p>
 				</div>
@@ -77,7 +77,7 @@ export async function subscribeWaitlist(data: WaitlistFormData) {
 		return {
 			success: true,
 			message:
-				"Successfully added to waitlist! Check your email for confirmation.",
+				"Successfully requested access! Check your email for confirmation.",
 		};
 	} catch (error: unknown) {
 		console.error("Waitlist subscription error:", error);
@@ -94,13 +94,13 @@ export async function subscribeWaitlist(data: WaitlistFormData) {
 		if (error instanceof Error && error.message.includes("already exists")) {
 			return {
 				success: true,
-				message: "You're already on the waitlist! We'll keep you updated.",
+				message: "You have already requested access. We'll keep you updated.",
 			};
 		}
 
 		return {
 			success: false,
-			message: "Failed to join waitlist. Please try again later.",
+			message: "Failed to request access. Please try again later.",
 		};
 	}
 }

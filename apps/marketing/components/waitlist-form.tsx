@@ -116,7 +116,7 @@ export function WaitlistForm({
 								Joining...
 							</>
 						) : (
-							"Join Waitlist"
+							"Request Access"
 						)}
 					</Button>
 				</div>
@@ -180,10 +180,10 @@ export function WaitlistForm({
 				{isPending ? (
 					<>
 						<Loader2 className="mr-2 h-4 w-4 animate-spin" />
-						Joining Waitlist...
+						Requesting Access...
 					</>
 				) : (
-					"Join the Waitlist"
+					"Request Access"
 				)}
 			</Button>
 
