@@ -1,0 +1,10 @@
+{
+  "name": "@tooling/requirements-check",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node ./dev.js",
+    "requirements": "node ./requirements.js"
+  }
+}

@@ -1,0 +1,9 @@
+---
+description: Applies optimal Next.js rules and best practices.
+globs: **/*.js,**/*.ts,**/*.tsx
+---
+- Favor React Server Components (RSC) where possible.
+- Minimize `'use client'` directives.
+- Optimize for performance and Web Vitals.
+- Use server actions for mutations instead of route handlers.
+- Use `next/image` for optimized image loading.

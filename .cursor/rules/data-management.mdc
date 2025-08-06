@@ -1,0 +1,8 @@
+---
+description: Interaction with the database.
+globs: **/*.js,**/*.ts,**/*.tsx
+alwaysApply: false
+---
+- Interact with the database using Drizzle ORM client; use `@workspace/database/client` and `@workspace/database/schema`.
+- Leverage Drizzle's column types.
+- Favor Drizzle's relational query builder over the query API.

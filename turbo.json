@@ -1,0 +1,81 @@
+{
+	"$schema": "https://turbo.build/schema.json",
+	"ui": "tui",
+	"globalEnv": [
+		"NEXT_PUBLIC_ANALYTICS_GA_MEASUREMENT_ID",
+		"NEXT_PUBLIC_ANALYTICS_GA_DISABLE_LOCALHOST_TRACKING",
+		"NEXT_PUBLIC_ANALYTICS_GA_DISABLE_PAGE_VIEWS_TRACKING",
+		"NEXT_PUBLIC_ANALYTICS_POSTHOG_KEY",
+		"NEXT_PUBLIC_ANALYTICS_POSTHOG_HOST",
+		"NEXT_PUBLIC_ANALYTICS_UMAMI_HOST",
+		"NEXT_PUBLIC_ANALYTICS_UMAMI_WEBSITE_ID",
+		"NEXT_PUBLIC_ANALYTICS_UMAMI_DISABLE_LOCALHOST_TRACKING",
+		"AUTH_SECRET",
+		"AUTH_GOOGLE_CLIENT_ID",
+		"AUTH_GOOGLE_CLIENT_SECRET",
+		"AUTH_MICROSOFT_ENTRA_ID_CLIENT_ID",
+		"AUTH_MICROSOFT_ENTRA_ID_CLIENT_SECRET",
+		"POLAR_ACCESS_TOKEN",
+		"CRON_SECRET",
+		"DATABASE_URL",
+		"EMAIL_FROM",
+		"EMAIL_FEEDBACK_INBOX",
+		"EMAIL_NODEMAILER_URL",
+		"EMAIL_POSTMARK_SERVER_TOKEN",
+		"EMAIL_RESEND_API_KEY",
+		"EMAIL_SENDGRID_API_KEY",
+		"MONITORING_SENTRY_ORG",
+		"MONITORING_SENTRY_PROJECT",
+		"MONITORING_SENTRY_AUTH_TOKEN",
+		"NEXT_PUBLIC_MONITORING_SENTRY_DSN",
+		"SENTRY_SUPPRESS_TURBOPACK_WARNING",
+		"NEXT_PUBLIC_DASHBOARD_URL",
+		"NEXT_PUBLIC_MARKETING_URL",
+		"NEXT_PUBLIC_AGENT_URL",
+		"NEXT_PUBLIC_CRISP_WEBSITE_ID",
+		"BLOB_READ_WRITE_TOKEN",
+		"UPSTASH_VECTOR_REST_URL",
+		"UPSTASH_VECTOR_REST_TOKEN"
+	],
+	"tasks": {
+		"dev": {
+			"cache": false,
+			"persistent": true
+		},
+		"build": {
+			"inputs": ["$TURBO_DEFAULT$", ".env*"],
+			"outputs": [".next/**", "!.next/cache/**"]
+		},
+		"start": {
+			"cache": false,
+			"persistent": true
+		},
+		"clean": {
+			"cache": false
+		},
+		"//#clean": {
+			"cache": false
+		},
+		"check-types": {
+			"dependsOn": ["^check-types"]
+		},
+		"format": {
+			"dependsOn": ["^format"]
+		},
+		"format:fix": {
+			"dependsOn": ["^format:fix"]
+		},
+		"lint": {
+			"dependsOn": ["^lint"]
+		},
+		"typecheck": {
+			"dependsOn": ["^typecheck"]
+		},
+		"analyze": {
+			"dependsOn": ["^analyze"]
+		},
+		"license#dev": {
+			"outputLogs": "errors-only"
+		}
+	}
+}

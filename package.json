@@ -1,0 +1,46 @@
+{
+	"name": "next-drizzle-authjs",
+	"version": "2.0.0",
+	"private": true,
+	"scripts": {
+		"dev": "cross-env FORCE_COLOR=1 turbo dev --parallel",
+		"build": "turbo build --cache-dir=.turbo",
+		"start": "cross-env FORCE_COLOR=1 turbo start --parallel",
+		"clean": "git clean -xdf node_modules dist .next",
+		"clean:workspaces": "turbo clean",
+		"format": "turbo format --cache-dir=.turbo --continue -- --cache --cache-location=\"node_modules/.cache/.prettiercache\" --ignore-path=\"../../.prettierignore\"",
+		"format:fix": "turbo format --cache-dir=.turbo --continue -- --write --cache --cache-location=\"node_modules/.cache/.prettiercache\" --ignore-path=\"../../.prettierignore\"",
+		"lint": "turbo lint --cache-dir=.turbo --continue -- --cache --cache-location \"node_modules/.cache/.eslintcache\" && manypkg check",
+		"lint:fix": "turbo lint --cache-dir=.turbo --continue -- --fix --cache --cache-location \"node_modules/.cache/.eslintcache\" && manypkg fix",
+		"typecheck": "turbo typecheck --cache-dir=.turbo",
+		"analyze": "turbo analyze --cache-dir=.turbo",
+		"update": "pnpm update -r",
+		"syncpack:list": "pnpm dlx syncpack list-mismatches",
+		"syncpack:fix": "pnpm dlx syncpack fix-mismatches",
+		"preinstall": "pnpm run --filter @tooling/requirements-check requirements",
+		"postinstall": "manypkg fix"
+	},
+	"devDependencies": {
+		"@ebay/nice-modal-react": "1.2.13",
+		"@manypkg/cli": "0.24.0",
+		"@turbo/gen": "2.5.4",
+		"cross-env": "7.0.3",
+		"turbo": "2.5.4",
+		"typescript": "5.8.3"
+	},
+	"pnpm": {
+		"overrides": {
+			"react": "19.0.0",
+			"react-dom": "19.0.0",
+			"react-is": "19.0.0",
+			"require-in-the-middle": "7.5.2",
+			"archiver": "7.0.1",
+			"unzipper": "0.12.3",
+			"tree-sitter": "0.21.1"
+		}
+	},
+	"packageManager": "pnpm@9.12.0",
+	"engines": {
+		"node": ">=20"
+	}
+}

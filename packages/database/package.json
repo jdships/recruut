@@ -1,0 +1,37 @@
+{
+  "name": "@workspace/database",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "clean": "git clean -xdf .cache .turbo build dist node_modules",
+    "typecheck": "tsc --noEmit",
+    "generate": "drizzle-kit generate --config=drizzle.config.ts",
+    "migrate": "drizzle-kit migrate --config=drizzle.config.ts",
+    "push": "drizzle-kit push --config=drizzle.config.ts",
+    "studio": "drizzle-kit studio --config=drizzle.config.ts"
+  },
+  "dependencies": {
+    "@t3-oss/env-nextjs": "0.13.6",
+    "drizzle-orm": "0.44.2",
+    "nanoid": "^5.1.5",
+    "pg": "8.13.3",
+    "zod": "3.25.56"
+  },
+  "devDependencies": {
+    "@types/node": "22.15.30",
+    "@types/pg": "8.15.4",
+    "@workspace/eslint-config": "workspace:*",
+    "@workspace/prettier-config": "workspace:*",
+    "@workspace/typescript-config": "workspace:*",
+    "drizzle-kit": "0.31.1",
+    "typescript": "5.8.3"
+  },
+  "prettier": "@workspace/prettier-config",
+  "exports": {
+    ".": "./src/index.ts",
+    "./keys": "./keys.ts",
+    "./client": "./src/client.ts",
+    "./schema": "./src/schema.ts"
+  }
+}

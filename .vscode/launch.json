@@ -1,0 +1,49 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Dashboard",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/apps/dashboard",
+      "runtimeExecutable": "node",
+      "program": "${workspaceFolder}/apps/dashboard/node_modules/next/dist/bin/next",
+      "args": ["dev", "-p", "3000"],
+      "env": {
+        "NODE_OPTIONS": "--inspect"
+      },
+      "console": "integratedTerminal",
+      "autoAttachChildProcesses": true,
+      "skipFiles": ["<node_internals>/**"],
+      "serverReadyAction": {
+        "action": "debugWithChrome",
+        "killOnServerStop": true,
+        "pattern": "- Local:.+(https?://.+)",
+        "uriFormat": "%s",
+        "webRoot": "${workspaceFolder}"
+      }
+    },
+    {
+      "name": "Debug Marketing",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/apps/marketing",
+      "runtimeExecutable": "node",
+      "program": "${workspaceFolder}/apps/dashboard/node_modules/next/dist/bin/next",
+      "args": ["dev", "-p", "3001"],
+      "env": {
+        "NODE_OPTIONS": "--inspect"
+      },
+      "console": "integratedTerminal",
+      "autoAttachChildProcesses": true,
+      "skipFiles": ["<node_internals>/**"],
+      "serverReadyAction": {
+        "action": "debugWithChrome",
+        "killOnServerStop": true,
+        "pattern": "- Local:.+(https?://.+)",
+        "uriFormat": "%s",
+        "webRoot": "${workspaceFolder}"
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+.DS*Store
+*.log
+\_.tmp
+
+dist/
+build/
+out/
+
+.cursor
+.cursorignore
+pnpm-lock.yaml
+.env
+.idea
+.vscode
+.zed

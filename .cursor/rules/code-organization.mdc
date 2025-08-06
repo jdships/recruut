@@ -1,0 +1,41 @@
+---
+description: Organize code in a consistent and logical manner.
+globs: */**
+---
+- This is a project using Next.js, TypeScript, React and a monorepo structure with Turborepo and pnpm workspaces.
+- Structure files logically, grouping related components, helpers, types and static content.
+- Prefer named exports for components over default exports.
+- Favor small, single-purpose components over large, monolithic ones.
+- Separate concerns between presentational and container components.
+- Use `@workspace/*` as the namespace prefix in Turborepo.
+- Structure the Turborepo into three main workspaces: apps, packages and tooling.
+- Framework: Next.js App Router, TypeScript, React, Node.js
+- UI: Shadcn UI, Tailwind CSS
+- Key libraries: React Hook Form, Zod, Lucide React, NiceModal, Nuqs
+- Database: Drizzle ORM
+- Monorepo: Turborepo with pnpm workspaces
+- Namespace: `@workspace/*`
+- Workspace Organization
+```
+/apps                   # Applications (executable)
+  /dashboard            # Main web application
+  /marketing            # Marketing pages
+  /agent                # Job application agent
+
+/packages               # Shared packages
+  /api-keys             # API key management
+  /auth                 # Authentication logic
+  /billing              # Payment handling
+  /database             # Drizzle schema & client
+  /ui                   # Design system (shadcn/ui)
+  /webhooks             # Webhook helpers
+
+/tooling                # Configuration packages
+  /eslint-config        # Linting rules
+  /typescript-config    # TypeScript presets
+```
+- Use kebab-case for file names: `add-item-form.tsx`
+- Schema files: `*-schema.ts` (e.g., `add-item-schema.ts`)
+- Action files: `*.ts` in `/actions` folder
+- Data fetching: `get-*.ts` in `/data` folder
+- DTOs: `*-dto.ts` in `/types/dtos`

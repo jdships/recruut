@@ -1,0 +1,5 @@
+{
+  "extends": "@workspace/typescript-config/base.json",
+  "include": ["."],
+  "exclude": [".cache", ".turbo", "build", "dist", "node_modules"]
+}

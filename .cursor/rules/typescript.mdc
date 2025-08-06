@@ -1,0 +1,28 @@
+---
+description: Applies general TypeScript coding standards and best practices across the project.
+globs: **/*.ts,**/*.tsx
+alwaysApply: false
+---
+- Use TypeScript for all code; prefer `type` over `interface` for consistency and flexibility
+- Write concise, technical TypeScript code with accurate examples
+- Use functional and declarative programming patterns; avoid classes except for services
+- Prefer iteration and modularization over code duplication
+- Use descriptive variable names with auxiliary verbs (e.g., `isLoading`, `hasError`, `canSubmit`)
+- Avoid `any` type completely; use `unknown` when input type is uncertain, then narrow with type guards
+- Handle errors gracefully using proper error types and boundaries
+- Use strict null checks; prefer explicit undefined handling over loose equality
+- Keep functions short and focused on single responsibility
+- Use descriptive names that clearly indicate purpose and return type
+- Prefer pure functions without side effects when possible
+- Use consistent naming patterns: `get*`, `create*`, `validate*`, `handle*`
+- Use classes for stateful services, but export functional interfaces
+- Implement proper separation of concerns
+- Use Zod schemas for runtime validation and TypeScript inference
+- Define explicit DTOs for API boundaries and data transfer
+- Prefer union types over enums for string literals
+- Use functional components with hooks exclusively
+- Implement proper prop typing with default values
+- Use discriminated unions for component variants
+- Prefer composition over prop drilling
+- Avoid premature optimization; profile before optimizing
+- Use custom error classes for different error types

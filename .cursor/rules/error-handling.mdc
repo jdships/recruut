@@ -1,0 +1,8 @@
+---
+description: Enfore friendly and logical error handling.
+globs: **/*.js,**/*.ts,**/*.tsx
+alwaysApply: false
+---
+- Implement robust error handling and logging mechanisms.
+- Provide clear and user-friendly error messages to the end-users.
+- Consider using custom error types for consistent error handling.

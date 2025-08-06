@@ -1,0 +1,10 @@
+{
+	"version": 2,
+	"installCommand": "pnpm install",
+	"buildCommand": "pnpm run build",
+	"outputDirectory": ".next",
+	"framework": "nextjs",
+	"env": {
+		"PNPM_VERSION": "9.12.0"
+	}
+}

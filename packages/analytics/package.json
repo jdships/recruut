@@ -1,0 +1,37 @@
+{
+  "name": "@workspace/analytics",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "clean": "git clean -xdf .cache .turbo build dist node_modules",
+    "format": "prettier --check \"**/*.{js,cjs,mjs,ts,tsx,mdx}\" --ignore-path=\"../../.prettierignore\"",
+    "format:fix": "prettier --write \"**/*.{js,cjs,mjs,ts,tsx,mdx}\" --ignore-path=\"../../.prettierignore\"",
+    "lint": "eslint . --max-warnings 0",
+    "lint:fix": "eslint --fix .",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@t3-oss/env-nextjs": "0.13.6",
+    "next": "15.3.3",
+    "posthog-js": "1.250.2",
+    "posthog-node": "4.16.0",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "zod": "3.25.56"
+  },
+  "devDependencies": {
+    "@types/node": "22.15.30",
+    "@types/react": "19.0.8",
+    "@types/react-dom": "19.0.3",
+    "@workspace/eslint-config": "workspace:*",
+    "@workspace/prettier-config": "workspace:*",
+    "@workspace/typescript-config": "workspace:*"
+  },
+  "prettier": "@workspace/prettier-config",
+  "exports": {
+    "./keys": "./keys.ts",
+    "./hooks/use-analytics": "./src/hooks/use-analytics.tsx",
+    "./provider": "./src/provider/index.ts"
+  }
+}

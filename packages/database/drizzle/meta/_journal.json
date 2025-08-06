@@ -1,0 +1,104 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1739707135642,
+      "tag": "20250216115855_lean_dust",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1749340615681,
+      "tag": "20250607235655_absurd_wasp",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1752214844423,
+      "tag": "20250711062044_normal_steve_rogers",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1752215511019,
+      "tag": "20250711063151_jittery_tenebrous",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1752250227162,
+      "tag": "20250711161027_giant_princess_powerful",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1752254325327,
+      "tag": "20250711171845_clever_valkyrie",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1752423389216,
+      "tag": "20250713161629_friendly_sharon_carter",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1752424300103,
+      "tag": "20250713163140_lying_lockjaw",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1752769757474,
+      "tag": "20250717162917_quiet_nico_minoru",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1752993455847,
+      "tag": "20250720063735_colorful_ikaris",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "7",
+      "when": 1754218010066,
+      "tag": "20250803104650_huge_roland_deschain",
+      "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "7",
+      "when": 1754292932387,
+      "tag": "20250804073532_slimy_hercules",
+      "breakpoints": true
+    },
+    {
+      "idx": 12,
+      "version": "7",
+      "when": 1754294026342,
+      "tag": "20250804075346_minor_scrambler",
+      "breakpoints": true
+    },
+    {
+      "idx": 13,
+      "version": "7",
+      "when": 1754295076810,
+      "tag": "20250804081116_concerned_frightful_four",
+      "breakpoints": true
+    }
+  ]
+}

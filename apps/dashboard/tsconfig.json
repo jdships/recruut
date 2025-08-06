@@ -1,0 +1,20 @@
+{
+  "extends": "@workspace/typescript-config/nextjs.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./*"],
+      "@workspace/ui/*": ["../../packages/ui/src/*"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "next-page.d.ts",
+    "next-params.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "*.mjs",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [".cache", ".next", ".turbo", "build", "dist", "node_modules"]
+}
